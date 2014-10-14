@@ -1,8 +1,14 @@
 # Cockpit
 
-This README outlines the details of collaborating on this Ember application.
+Permission to buzz by the tower?
 
-A short introduction of this app could easily go here.
+## Description
+
+A portal that allows a peek into the health of [Whitelabel](http://wlabel.co) and it's customers. 
+
+This is used as the one place customers can go to view the work queue and the invoice schedule.
+
+This is also used by the company to view the health of the company and get more information and documentation.
 
 ## Prerequisites
 
@@ -13,7 +19,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone http://github.com/whitelabelco/cockpit` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -22,10 +28,6 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at http://localhost:4200.
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -39,13 +41,4 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* ember: http://emberjs.com/
-* ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+TODO:
