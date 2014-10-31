@@ -1,5 +1,9 @@
 <h2 id='title'>Whitelabel</h2>
 
-<a {{bind-attr href="harvestOAuthUrl"}}>Login with Harvest</a>
+{{#unless session.isAuthenticated}}
+  <a {{bind-attr href="harvestOAuthUrl"}}>Login with Harvest</a>
+  <div><a {{action "authenticate"}} href="#">Login with Harvest on the client</a></div>
+{{/unless}}
 
 {{outlet}}
+
