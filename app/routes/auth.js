@@ -2,6 +2,6 @@ import Ember from "ember";
 
 export default Ember.Route.extend({
   model: function(queryParams) {
-    console.log(queryParams);
+    this.get('session').authenticate('authenticator:harvest', queryParams);
   }
 });
