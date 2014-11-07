@@ -2,6 +2,8 @@
 
 {{#unless session.isAuthenticated}}
   <a {{bind-attr href="harvestOAuthUrl"}}>Login with Harvest</a>
+{{else}}
+  Hello, {{session.first_name}}
 {{/unless}}
 
 {{outlet}}

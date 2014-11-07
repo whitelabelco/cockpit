@@ -5,15 +5,18 @@ var HarvestAuthenticator = Base.extend({
   authenticate: function(params) {
     var self = this;
     return new Ember.RSVP.Promise(function(resolve, reject) {
-      self.makeRequest("https://wlabel.harvestapp.com/account/who_am_i", "GET", { access_token: params.token }).then(function(response) {
-        console.log("RESPONSE: " + response);
-      }, function(xhr, status, error) {
-        console.log("ERROR: " + xhr.responseJSON);
+      self.makeRequest("http://localhost:4567/api/accounts/me", "GET", { access_token: params.token }).then(function(response) {
+        var user = response.user;
+        user = Ember.merge(user, { access_token: params.token, refresh_token: params.refresh_token, expires_at: params.expires_at });
+        resolve(user);
+      }, function(xhr) {
+        reject(xhr);
       });
     });
   },
 
   makeRequest: function(url, type, data) {
+    console.log(data);
     return Ember.$.ajax({
       url:         url,
       type:        type,
