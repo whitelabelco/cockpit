@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'cockpit',
     environment: environment,
     baseURL: '/',
+    apiHost: '',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -33,6 +34,7 @@ module.exports = function(environment) {
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
+    ENV.apiHost = '';
     ENV.locationType = 'auto';
 
     // keep test console output quieter
